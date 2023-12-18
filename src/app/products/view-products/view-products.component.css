@@ -1,0 +1,17 @@
+/* Default styles for larger screens */
+.card-img-top {
+    height: 500px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .card-img-top {
+        height: auto; /* Adjust height for smaller screens */
+    }
+    .d-flex{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    /* Add any additional styles for smaller screens */
+}

@@ -1,0 +1,40 @@
+<!-- cart with product -->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div *ngFor="let wish of allWishlist" class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" [src]="wish.image" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{wish.title}}</h5>
+                            <!-- Product price-->
+                            $ {{wish.price}}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer d-flex justify-content-space-between p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a routerLink="/cart" class="ms-5 btn btn-outline-success mt-auto"><i class="fa-solid fa-cart-shopping"></i></a></div>
+                        <div class="text-center"><a (click)="deleteWishlistItem(wish.id)" class=" ms-5 btn btn-outline-danger mt-auto"><i class="fa-solid fa-trash"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- empty cart -->
+<div class="container-fluid" *ngIf="allWishlist.length==0">
+    <div class="text-center">
+        <h1>Your Wishlist Was Empty.....🤷‍♂🤷</h1>
+    </div>
+    <div class="text-center mt-5">
+        <img style="height: 500px;" src="https://www.elitejewelryhouse.com/assets/images/empty-wishlist.png" alt="">
+    </div>
+    <div class="text-center">
+        <button class="ms-4">Shop More</button>
+    </div>
+</div>

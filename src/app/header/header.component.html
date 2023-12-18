@@ -1,0 +1,29 @@
+ <!-- Navigation-->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a routerLink="" class="navbar-brand"><img src="../../assets/images/navimg.svg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+              <input (keyup)="search($event)" type="text" placeholder="What is on your mind today?" class="form-control">
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-none m-2" type="submit">
+                    <i style="color: #5BBAC8;" class="fa-solid fa-location-dot fs-4"></i>
+                </button>
+                <button routerLink="products/wishlist" class="btn btn-outline-none m-2" type="submit">
+                    <i style="color: #5BBAC8;" class="fa-regular fa-bell fs-4"></i>
+                </button>
+                <button routerLink="products/wishlist" class="btn btn-outline-none m-2" type="submit">
+                    <i style="color: #5BBAC8;" class="fa-regular fa-heart fs-4"></i>
+                </button>
+                <button routerLink="products/cart" class="btn btn-outline-none m-2" type="submit">
+                    <i class="bi-cart-fill me-1"></i>
+                    <i style="color: #5BBAC8;" class="fa-solid fa-cart-shopping fs-4"></i>
+                    <span class="badge bg-secondary text-info ms-1 rounded-pill">{{cartCountvalue}}</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
+

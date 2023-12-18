@@ -1,0 +1,57 @@
+/* Default styles for all screen sizes */
+.card {
+    height: 500px;
+    width: 18rem;
+}
+
+.card img {
+    height: 200px;
+    width: 100%;
+}
+
+.container p {
+    color: black;
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 576px) {
+    .card {
+        width: 100%; /* Make cards full width on small screens */
+    }
+
+    .card img {
+        height: auto; /* Allow images to resize proportionally on small screens */
+    }
+    h5{
+        font-size: 12px;
+       }
+
+    /* Adjust button alignment for small screens */
+    .carousel-control-prev, .carousel-control-next {
+        width: 20%; /* Adjust button width as needed */
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Make cards full width on medium screens */
+    }
+    h5{
+        font-size: 12px;
+       }
+}
+
+@media (max-width: 992px) {
+    .container p {
+        font-size: 24px; /* Decrease font size on large screens */
+    }
+    
+}
+

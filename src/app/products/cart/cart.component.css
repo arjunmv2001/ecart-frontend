@@ -1,0 +1,42 @@
+.btn1{
+    color: rgb(255, 255, 255);
+    border: 1px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 6px;
+    height: 32px;
+    margin-top: 10px;
+    width: 130px;
+}
+/* Default styles for all screen sizes */
+.container {
+    margin-top: 5rem; /* Adjust as needed */
+  }
+  
+  @media (max-width: 320px) {
+    .col-6 {
+      width: 100%; /* Full width on smaller screens */
+    }
+  
+  }
+  
+  @media (min-width: 321px) and (max-width: 375px) {
+    .col-6 {
+        width: 100%; /* Full width on smaller screens */
+      }
+   
+  }
+  
+  @media (min-width: 376px) and (max-width: 425px) {
+
+   
+  }
+  
+  @media (min-width: 426px) and (max-width: 768px) {
+   
+  }
+  
+  @media (min-width: 769px) {
+    
+  }
+  
+  
